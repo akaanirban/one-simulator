@@ -7,6 +7,8 @@ Created on Thu Aug  3 00:45:01 2017
 from Vehicle import Vehicle
 import matlab.engine
 import numpy as np
+import math
+
 
 #etracts the contents and tags from the message perhost report
 def extractContentTag(filename, resultFilename):
@@ -58,15 +60,43 @@ def getXsignal(filename):
                 Xsignal.append(float(xvalue[0]))
     return Xsignal
     
+
+def getErrorRatio(X, Xhat):
+    numerator = 0
+    dinominator = 0
+    if(len(X) != len(Xhat)):
+        return
+    else:
+        for i in range(len(X)):
+            numerator = numerator + (X[i]-Xhat[i])**2
+            dinominator = dinominator + (X[i])**2
+    return math.sqrt(numerator/dinominator)
     
+
+def getRecoveryThreshold(X_elem, Xhat_elem, theta):
+    if (X_elem ==0 and Xhat_elem ==0):
+        return True
+    elif (X_elem ==0 and Xhat_elem != 0):
+        return False
+    else:
+        return (abs(X_elem- Xhat_elem)/abs(X_elem)) <= theta
     
-    
-    
+
+def getRecoveryRatio(X, Xhat, theta):
+    lam = 0
+    if(len(X) != len(Xhat)):
+        return
+    else:
+        for i in range(len(X)):
+            if(getRecoveryThreshold(X[i], Xhat[i], theta)):
+                lam = lam +1
+    return lam/len(X)
+
     
 if __name__ == "__main__":
     Vehicles = extractContentTag("paper_settings_MessagesPerHostReport.txt", "test.txt")
     Xsignal = getXsignal("paper_settings_CreatedMessagesReport.txt")
-    
+    theta = 0.01
     allMatlabEngines = []
     #for i in range(len(Vehicles)):
     for i in range(3):
@@ -81,8 +111,9 @@ if __name__ == "__main__":
         b = allMatlabEngines[i].getActualSignal(Phi, Y)
         curr = np.array([val for subl in b for val in subl])
         actual = np.array(Xsignal)
-        print("vehicle: {} - {}".format(i, np.linalg.norm(curr-actual)))
-    
+        print("vehicle: {} - norm Difference= {}, Error ratio= {}"
+              .format(i, np.linalg.norm(curr-actual), getErrorRatio(actual, curr)))
+        print("\nRecovery ratio = {}\n".format(getRecoveryRatio(actual, curr, theta)))
     
     
     

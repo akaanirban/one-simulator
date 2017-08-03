@@ -12,7 +12,7 @@ def writeScenario(filename):
     file.write("Scenario.name = paper_settings\n")
     file.write("Scenario.simulateConnections = true\n")
     file.write("Scenario.updateInterval = 0.1\n")
-    file.write("Scenario.endTime = 240\n")
+    file.write("Scenario.endTime = 480\n")
     file.write("Scenario.nrofHostGroups = 66\n")
     file.write("\n")
     file.close
@@ -121,7 +121,7 @@ def writeReports(filename):
     #file.write("Report.report9 = MessageDelayReport\n")
     #file.write("Report.report10 = MessageReport\n")
     #file.write("Report.report11 = EventLogReport\n")
-    file.write("Report.granularity = 239\n")
+    file.write("Report.granularity = 479\n")
     #some random settings might not be needed
     file.write("ProphetRouter.secondsInTimeUnit = 30\n")
     file.write("SprayAndWaitRouter.nrofCopies = 6\n")
