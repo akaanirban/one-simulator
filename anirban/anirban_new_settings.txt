@@ -1,0 +1,378 @@
+#
+
+# Default settings for the simulation
+
+#
+
+## Scenario settings
+Scenario.name = anirban_test
+Scenario.simulateConnections = true
+Scenario.updateInterval = 0.1
+# 43200s == 12h
+#Scenario.endTime = 43200
+Scenario.endTime = 12000
+
+## Interface-specific settings:
+# type : which interface class the interface belongs to
+# For different types, the sub-parameters are interface-specific
+# For SimpleBroadcastInterface, the parameters are:
+# transmitSpeed : transmit speed of the interface (bytes per second)
+# transmitRange : range of the interface (meters)
+
+# "Bluetooth" interface for all nodes
+btInterface.type = SimpleBroadcastInterface
+# Transmit speed of 2 Mbps = 250kBps
+btInterface.transmitSpeed = 250k
+btInterface.transmitRange = 100
+
+# High speed, long range, interface for group 4
+highspeedInterface.type = SimpleBroadcastInterface
+highspeedInterface.transmitSpeed = 10M
+highspeedInterface.transmitRange = 1000
+
+# Define 6 different node groups
+Scenario.nrofHostGroups = 19
+
+# The Tram groups
+Group2.groupID = Vehicle_
+Group2.bufferSize = 50M
+Group2.router = PayloadMessageRouter
+Group2.movementModel = ShortestPathMapBasedMovement
+#Group.routeFile = data/tram3.wkt
+Group2.routeType = 1
+Group2.waitTime = 10, 30
+Group2.speed = 40, 50
+Group2.nrofHosts = 10
+Group2.nrofInterfaces = 1
+Group2.interface1 = btInterface
+#Group.interface2 = highspeedInterface
+
+
+
+
+#Group1 central node which are stationary
+#Group1.movementModel = StationaryMovement
+#Group1.nrofHosts = 1
+#Group1.nodeLocation = 0,0
+#Group1.groupID = Stationary_Node_
+#Group1.bufferSize = 1G
+#Group1.speed = 0,0
+
+Group1.groupID = HotSpot_a
+Group1.bufferSize = 50M
+Group1.router = PayloadMessageRouter
+Group1.movementModel = PayloadStationaryMovement
+#Group.routeFile = data/tram3.wkt
+Group1.speed = 0, 0
+Group1.nrofHosts = 1
+Group1.nrofInterfaces = 1
+Group1.interface1 = btInterface
+
+
+
+
+
+
+
+
+
+
+Group3.groupID = HotSpot_b
+Group3.bufferSize = 50M
+Group3.router = PayloadMessageRouter
+Group3.movementModel = PayloadStationaryMovement
+#Group.routeFile = data/tram3.wkt
+Group3.speed = 0, 0
+Group3.nrofHosts = 1
+Group3.nrofInterfaces = 1
+Group3.interface1 = btInterface
+
+Group4.groupID = HotSpot_c
+Group4.bufferSize = 50M
+Group4.router = PayloadMessageRouter
+Group4.movementModel = PayloadStationaryMovement
+#Group.routeFile = data/tram3.wkt
+Group4.speed = 0, 0
+Group4.nrofHosts = 1
+Group4.nrofInterfaces = 1
+Group4.interface1 = btInterface
+
+Group5.groupID = HotSpot_d
+Group5.bufferSize = 50M
+Group5.router = PayloadMessageRouter
+Group5.movementModel = PayloadStationaryMovement
+#Group.routeFile = data/tram3.wkt
+Group5.speed = 0, 0
+Group5.nrofHosts = 1
+Group5.nrofInterfaces = 1
+Group5.interface1 = btInterface
+
+Group6.groupID = HotSpot_e
+Group6.bufferSize = 50M
+Group6.router = PayloadMessageRouter
+Group6.movementModel = PayloadStationaryMovement
+#Group.routeFile = data/tram3.wkt
+Group6.speed = 0, 0
+Group6.nrofHosts = 1
+Group6.nrofInterfaces = 1
+Group6.interface1 = btInterface
+
+Group7.groupID = HotSpot_f
+Group7.bufferSize = 50M
+Group7.router = PayloadMessageRouter
+Group7.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group7.speed = 0, 0
+Group7.nrofHosts = 1
+Group7.nrofInterfaces = 1
+Group7.interface1 = btInterface
+
+Group8.groupID = HotSpot_g
+Group8.bufferSize = 50M
+Group8.router = PayloadMessageRouter
+Group8.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group8.speed = 0, 0
+Group8.nrofHosts = 1
+Group8.nrofInterfaces = 1
+Group8.interface1 = btInterface
+
+Group9.groupID = HotSpot_h
+Group9.bufferSize = 50M
+Group9.router = PayloadMessageRouter
+Group9.movementModel = PayloadStationaryMovement
+#Grou9.routeFile = data/tram3.wkt
+Group9.speed = 0, 0
+Group9.nrofHosts = 1
+Group9.nrofInterfaces = 1
+Group9.interface1 = btInterface
+
+Group10.groupID = HotSpot_i
+Group10.bufferSize = 50M
+Group10.router = PayloadMessageRouter
+Group10.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group10.speed = 0, 0
+Group10.nrofHosts = 1
+Group10.nrofInterfaces = 1
+Group10.interface1 = btInterface
+
+Group11.groupID = HotSpot_j
+Group11.bufferSize = 50M
+Group11.router = PayloadMessageRouter
+Group11.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group11.speed = 0, 0
+Group11.nrofHosts = 1
+Group11.nrofInterfaces = 1
+Group11.interface1 = btInterface
+
+Group12.groupID = HotSpot_k
+Group12.bufferSize = 50M
+Group12.router = PayloadMessageRouter
+Group12.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group12.speed = 0, 0
+Group12.nrofHosts = 1
+Group12.nrofInterfaces = 1
+Group12.interface1 = btInterface
+
+Group13.groupID = HotSpot_l
+Group13.bufferSize = 50M
+Group13.router = PayloadMessageRouter
+Group13.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group13.speed = 0, 0
+Group13.nrofHosts = 1
+Group13.nrofInterfaces = 1
+Group13.interface1 = btInterface
+
+Group14.groupID = HotSpot_m
+Group14.bufferSize = 50M
+Group14.router = PayloadMessageRouter
+Group14.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group14.speed = 0, 0
+Group14.nrofHosts = 1
+Group14.nrofInterfaces = 1
+Group14.interface1 = btInterface
+
+Group15.groupID = HotSpot_n
+Group15.bufferSize = 50M
+Group15.router = PayloadMessageRouter
+Group15.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group15.speed = 0, 0
+Group15.nrofHosts = 1
+Group15.nrofInterfaces = 1
+Group15.interface1 = btInterface
+
+Group16.groupID = HotSpot_o
+Group16.bufferSize = 50M
+Group16.router = PayloadMessageRouter
+Group16.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group16.speed = 0, 0
+Group16.nrofHosts = 1
+Group16.nrofInterfaces = 1
+Group16.interface1 = btInterface
+
+Group17.groupID = HotSpot_p
+Group17.bufferSize = 50M
+Group17.router = PayloadMessageRouter
+Group17.movementModel = PayloadStationaryMovement
+#Grou7.routeFile = data/tram3.wkt
+Group17.speed = 0, 0
+Group17.nrofHosts = 1
+Group17.nrofInterfaces = 1
+Group17.interface1 = btInterface
+
+Group18.groupID = HotSpot_q
+Group18.bufferSize = 50M
+Group18.router = PayloadMessageRouter
+Group18.movementModel = PayloadStationaryMovement
+#Grou8routeFile = data/tram3.wkt
+Group18.speed = 0, 0
+Group18.nrofHosts = 1
+Group18.nrofInterfaces = 1
+Group18.interface1 = btInterface
+
+
+Group19.groupID = HotSpot_TO
+Group19.bufferSize = 50M
+Group19.router = PayloadMessageRouter
+Group19.movementModel = StationaryMovement
+#Grou8routeFile = data/tram3.wkt
+Group19.speed = 0, 0
+Group19.nrofHosts = 1
+Group19.nodeLocation = 4500,3400
+Group19.nrofInterfaces = 1
+Group19.interface1 = btInterface
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# External Messages generated
+## Message creation parameters
+# How many event generators
+#Events.nrof = 20
+#Events.class = ExternalEventsQueue
+#Events.filePath = anirban/test.txt
+
+
+## Message creation parameters
+# How many event generators
+Events.nrof = 1
+# Class of the first event generator
+Events1.class = MessageEventGenerator
+# (following settings are specific for the MessageEventGenerator class)
+# Creation interval in seconds (one new message every 25 to 35 seconds)
+Events1.interval = 90,100
+# Message sizes (500kB - 1MB)
+Events1.size = 500k,1M
+# range of message source/destination addresses
+# ALWAYS START FROM 1
+Events1.hosts = 11,27
+# Message ID prefix
+Events1.tohosts = 27,27
+Events1.prefix = M
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Movement model settings
+# seed for movement models' pseudo random number generator (default = 0)
+MovementModel.rngSeed = 1
+# World's size for Movement Models without implicit size (width, height; meters)
+MovementModel.worldSize = 4500, 3400
+# How long time to move hosts in the world before real simulation
+MovementModel.warmup = 1000
+
+## Map based movement -movement model specific settings
+MapBasedMovement.nrofMapFiles = 4
+
+MapBasedMovement.mapFile1 = data/roads.wkt
+MapBasedMovement.mapFile2 = data/main_roads.wkt
+MapBasedMovement.mapFile3 = data/pedestrian_paths.wkt
+MapBasedMovement.mapFile4 = data/shops.wkt
+
+## Reports - all report names have to be valid report classes
+
+# how many reports to load
+Report.nrofReports = 11
+# length of the warm up period (simulated seconds)
+Report.warmup = 0
+# default directory of reports (can be overridden per Report with output setting
+Report.reportDir = relatorios/
+# Report classes to load
+
+Report.report1 = MessageStatsReport
+Report.report2 = DeliveredMessagesReport
+Report.report3 = ContactsPerHourReport
+Report.report4 = CreatedMessagesReport
+Report.report5 = BufferOccupancyReport
+Report.report6 = MessageLocationReport
+MessageLocationReport.granularity = 1
+MessageLocationReport.messages = 1
+Report.report7 = MessagesPerHostReport
+Report.report8 = MessageDeliveryReport
+Report.report9 = MessageDelayReport
+Report.report10 = MessageReport
+Report.report11 = EventLogReport
+Report.granularity = 11999
+## Default settings for some routers settings
+ProphetRouter.secondsInTimeUnit = 30
+SprayAndWaitRouter.nrofCopies = 6
+SprayAndWaitRouter.binaryMode = true
+
+## Optimization settings -- these affect the speed of the simulation
+## see World class for details.
+Optimization.cellSizeMult = 5
+Optimization.randomizeUpdateOrder = true
+
+
+## GUI settings
+
+# GUI underlay image settings
+GUI.UnderlayImage.fileName = data/helsinki_underlay.png
+# Image offset in pixels (x, y)
+GUI.UnderlayImage.offset = 64, 20
+# Scaling factor for the image
+GUI.UnderlayImage.scale = 4.75
+# Image rotation (radians)
+GUI.UnderlayImage.rotate = -0.015
+
+# how many events to show in the log panel (default = 30)
+GUI.EventLogPanel.nrofEvents = 100
+# Regular Expression log filter (see Pattern-class from the Java API for RE-matching details)
+#GUI.EventLogPanel.REfilter = .*p[1-9]<->p[1-9]$

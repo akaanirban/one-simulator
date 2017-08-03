@@ -1,0 +1,1154 @@
+Scenario.name = paper_settings
+Scenario.simulateConnections = true
+Scenario.updateInterval = 0.1
+Scenario.endTime = 240
+Scenario.nrofHostGroups = 66
+
+btInterface.type = SimpleBroadcastInterface
+btInterface.transmitSpeed = 250k
+btInterface.transmitRange = 100
+highspeedInterface.type = SimpleBroadcastInterface
+highspeedInterface.transmitSpeed = 10M
+highspeedInterface.transmitRange = 1000
+
+Group1.groupID=Vehicle_
+Group1.bufferSize = 50M
+Group1.router = PayloadMessageRouter
+Group1.movementModel = ShortestPathMapBasedMovement
+Group1.routeType = 1
+Group1.waitTime = 10, 30
+Group1.speed = 90, 90
+Group1.nrofHosts = 800
+Group1.nrofInterfaces = 1
+Group1.interface1 = btInterface
+
+Group2.groupID=HotSpot_1_
+Group2.bufferSize = 50M
+Group2.router = PayloadMessageRouter
+Group2.movementModel = MapBasedStationaryMovement
+Group2.speed = 0, 0
+Group2.nrofHosts = 1
+Group2.nrofInterfaces = 1
+Group2.interface1 = btInterface
+
+Group3.groupID=HotSpot_2_
+Group3.bufferSize = 50M
+Group3.router = PayloadMessageRouter
+Group3.movementModel = MapBasedStationaryMovement
+Group3.speed = 0, 0
+Group3.nrofHosts = 1
+Group3.nrofInterfaces = 1
+Group3.interface1 = btInterface
+
+Group4.groupID=HotSpot_3_
+Group4.bufferSize = 50M
+Group4.router = PayloadMessageRouter
+Group4.movementModel = MapBasedStationaryMovement
+Group4.speed = 0, 0
+Group4.nrofHosts = 1
+Group4.nrofInterfaces = 1
+Group4.interface1 = btInterface
+
+Group5.groupID=HotSpot_4_
+Group5.bufferSize = 50M
+Group5.router = PayloadMessageRouter
+Group5.movementModel = MapBasedStationaryMovement
+Group5.speed = 0, 0
+Group5.nrofHosts = 1
+Group5.nrofInterfaces = 1
+Group5.interface1 = btInterface
+
+Group6.groupID=HotSpot_5_
+Group6.bufferSize = 50M
+Group6.router = PayloadMessageRouter
+Group6.movementModel = MapBasedStationaryMovement
+Group6.speed = 0, 0
+Group6.nrofHosts = 1
+Group6.nrofInterfaces = 1
+Group6.interface1 = btInterface
+
+Group7.groupID=HotSpot_6_
+Group7.bufferSize = 50M
+Group7.router = PayloadMessageRouter
+Group7.movementModel = MapBasedStationaryMovement
+Group7.speed = 0, 0
+Group7.nrofHosts = 1
+Group7.nrofInterfaces = 1
+Group7.interface1 = btInterface
+
+Group8.groupID=HotSpot_7_
+Group8.bufferSize = 50M
+Group8.router = PayloadMessageRouter
+Group8.movementModel = MapBasedStationaryMovement
+Group8.speed = 0, 0
+Group8.nrofHosts = 1
+Group8.nrofInterfaces = 1
+Group8.interface1 = btInterface
+
+Group9.groupID=HotSpot_8_
+Group9.bufferSize = 50M
+Group9.router = PayloadMessageRouter
+Group9.movementModel = MapBasedStationaryMovement
+Group9.speed = 0, 0
+Group9.nrofHosts = 1
+Group9.nrofInterfaces = 1
+Group9.interface1 = btInterface
+
+Group10.groupID=HotSpot_9_
+Group10.bufferSize = 50M
+Group10.router = PayloadMessageRouter
+Group10.movementModel = MapBasedStationaryMovement
+Group10.speed = 0, 0
+Group10.nrofHosts = 1
+Group10.nrofInterfaces = 1
+Group10.interface1 = btInterface
+
+Group11.groupID=HotSpot_10_
+Group11.bufferSize = 50M
+Group11.router = PayloadMessageRouter
+Group11.movementModel = MapBasedStationaryMovement
+Group11.speed = 0, 0
+Group11.nrofHosts = 1
+Group11.nrofInterfaces = 1
+Group11.interface1 = btInterface
+
+Group12.groupID=HotSpot_11_
+Group12.bufferSize = 50M
+Group12.router = PayloadMessageRouter
+Group12.movementModel = MapBasedStationaryMovement
+Group12.speed = 0, 0
+Group12.nrofHosts = 1
+Group12.nrofInterfaces = 1
+Group12.interface1 = btInterface
+
+Group13.groupID=HotSpot_12_
+Group13.bufferSize = 50M
+Group13.router = PayloadMessageRouter
+Group13.movementModel = MapBasedStationaryMovement
+Group13.speed = 0, 0
+Group13.nrofHosts = 1
+Group13.nrofInterfaces = 1
+Group13.interface1 = btInterface
+
+Group14.groupID=HotSpot_13_
+Group14.bufferSize = 50M
+Group14.router = PayloadMessageRouter
+Group14.movementModel = MapBasedStationaryMovement
+Group14.speed = 0, 0
+Group14.nrofHosts = 1
+Group14.nrofInterfaces = 1
+Group14.interface1 = btInterface
+
+Group15.groupID=HotSpot_14_
+Group15.bufferSize = 50M
+Group15.router = PayloadMessageRouter
+Group15.movementModel = MapBasedStationaryMovement
+Group15.speed = 0, 0
+Group15.nrofHosts = 1
+Group15.nrofInterfaces = 1
+Group15.interface1 = btInterface
+
+Group16.groupID=HotSpot_15_
+Group16.bufferSize = 50M
+Group16.router = PayloadMessageRouter
+Group16.movementModel = MapBasedStationaryMovement
+Group16.speed = 0, 0
+Group16.nrofHosts = 1
+Group16.nrofInterfaces = 1
+Group16.interface1 = btInterface
+
+Group17.groupID=HotSpot_16_
+Group17.bufferSize = 50M
+Group17.router = PayloadMessageRouter
+Group17.movementModel = MapBasedStationaryMovement
+Group17.speed = 0, 0
+Group17.nrofHosts = 1
+Group17.nrofInterfaces = 1
+Group17.interface1 = btInterface
+
+Group18.groupID=HotSpot_17_
+Group18.bufferSize = 50M
+Group18.router = PayloadMessageRouter
+Group18.movementModel = MapBasedStationaryMovement
+Group18.speed = 0, 0
+Group18.nrofHosts = 1
+Group18.nrofInterfaces = 1
+Group18.interface1 = btInterface
+
+Group19.groupID=HotSpot_18_
+Group19.bufferSize = 50M
+Group19.router = PayloadMessageRouter
+Group19.movementModel = MapBasedStationaryMovement
+Group19.speed = 0, 0
+Group19.nrofHosts = 1
+Group19.nrofInterfaces = 1
+Group19.interface1 = btInterface
+
+Group20.groupID=HotSpot_19_
+Group20.bufferSize = 50M
+Group20.router = PayloadMessageRouter
+Group20.movementModel = MapBasedStationaryMovement
+Group20.speed = 0, 0
+Group20.nrofHosts = 1
+Group20.nrofInterfaces = 1
+Group20.interface1 = btInterface
+
+Group21.groupID=HotSpot_20_
+Group21.bufferSize = 50M
+Group21.router = PayloadMessageRouter
+Group21.movementModel = MapBasedStationaryMovement
+Group21.speed = 0, 0
+Group21.nrofHosts = 1
+Group21.nrofInterfaces = 1
+Group21.interface1 = btInterface
+
+Group22.groupID=HotSpot_21_
+Group22.bufferSize = 50M
+Group22.router = PayloadMessageRouter
+Group22.movementModel = MapBasedStationaryMovement
+Group22.speed = 0, 0
+Group22.nrofHosts = 1
+Group22.nrofInterfaces = 1
+Group22.interface1 = btInterface
+
+Group23.groupID=HotSpot_22_
+Group23.bufferSize = 50M
+Group23.router = PayloadMessageRouter
+Group23.movementModel = MapBasedStationaryMovement
+Group23.speed = 0, 0
+Group23.nrofHosts = 1
+Group23.nrofInterfaces = 1
+Group23.interface1 = btInterface
+
+Group24.groupID=HotSpot_23_
+Group24.bufferSize = 50M
+Group24.router = PayloadMessageRouter
+Group24.movementModel = MapBasedStationaryMovement
+Group24.speed = 0, 0
+Group24.nrofHosts = 1
+Group24.nrofInterfaces = 1
+Group24.interface1 = btInterface
+
+Group25.groupID=HotSpot_24_
+Group25.bufferSize = 50M
+Group25.router = PayloadMessageRouter
+Group25.movementModel = MapBasedStationaryMovement
+Group25.speed = 0, 0
+Group25.nrofHosts = 1
+Group25.nrofInterfaces = 1
+Group25.interface1 = btInterface
+
+Group26.groupID=HotSpot_25_
+Group26.bufferSize = 50M
+Group26.router = PayloadMessageRouter
+Group26.movementModel = MapBasedStationaryMovement
+Group26.speed = 0, 0
+Group26.nrofHosts = 1
+Group26.nrofInterfaces = 1
+Group26.interface1 = btInterface
+
+Group27.groupID=HotSpot_26_
+Group27.bufferSize = 50M
+Group27.router = PayloadMessageRouter
+Group27.movementModel = MapBasedStationaryMovement
+Group27.speed = 0, 0
+Group27.nrofHosts = 1
+Group27.nrofInterfaces = 1
+Group27.interface1 = btInterface
+
+Group28.groupID=HotSpot_27_
+Group28.bufferSize = 50M
+Group28.router = PayloadMessageRouter
+Group28.movementModel = MapBasedStationaryMovement
+Group28.speed = 0, 0
+Group28.nrofHosts = 1
+Group28.nrofInterfaces = 1
+Group28.interface1 = btInterface
+
+Group29.groupID=HotSpot_28_
+Group29.bufferSize = 50M
+Group29.router = PayloadMessageRouter
+Group29.movementModel = MapBasedStationaryMovement
+Group29.speed = 0, 0
+Group29.nrofHosts = 1
+Group29.nrofInterfaces = 1
+Group29.interface1 = btInterface
+
+Group30.groupID=HotSpot_29_
+Group30.bufferSize = 50M
+Group30.router = PayloadMessageRouter
+Group30.movementModel = MapBasedStationaryMovement
+Group30.speed = 0, 0
+Group30.nrofHosts = 1
+Group30.nrofInterfaces = 1
+Group30.interface1 = btInterface
+
+Group31.groupID=HotSpot_30_
+Group31.bufferSize = 50M
+Group31.router = PayloadMessageRouter
+Group31.movementModel = MapBasedStationaryMovement
+Group31.speed = 0, 0
+Group31.nrofHosts = 1
+Group31.nrofInterfaces = 1
+Group31.interface1 = btInterface
+
+Group32.groupID=HotSpot_31_
+Group32.bufferSize = 50M
+Group32.router = PayloadMessageRouter
+Group32.movementModel = MapBasedStationaryMovement
+Group32.speed = 0, 0
+Group32.nrofHosts = 1
+Group32.nrofInterfaces = 1
+Group32.interface1 = btInterface
+
+Group33.groupID=HotSpot_32_
+Group33.bufferSize = 50M
+Group33.router = PayloadMessageRouter
+Group33.movementModel = MapBasedStationaryMovement
+Group33.speed = 0, 0
+Group33.nrofHosts = 1
+Group33.nrofInterfaces = 1
+Group33.interface1 = btInterface
+
+Group34.groupID=HotSpot_33_
+Group34.bufferSize = 50M
+Group34.router = PayloadMessageRouter
+Group34.movementModel = MapBasedStationaryMovement
+Group34.speed = 0, 0
+Group34.nrofHosts = 1
+Group34.nrofInterfaces = 1
+Group34.interface1 = btInterface
+
+Group35.groupID=HotSpot_34_
+Group35.bufferSize = 50M
+Group35.router = PayloadMessageRouter
+Group35.movementModel = MapBasedStationaryMovement
+Group35.speed = 0, 0
+Group35.nrofHosts = 1
+Group35.nrofInterfaces = 1
+Group35.interface1 = btInterface
+
+Group36.groupID=HotSpot_35_
+Group36.bufferSize = 50M
+Group36.router = PayloadMessageRouter
+Group36.movementModel = MapBasedStationaryMovement
+Group36.speed = 0, 0
+Group36.nrofHosts = 1
+Group36.nrofInterfaces = 1
+Group36.interface1 = btInterface
+
+Group37.groupID=HotSpot_36_
+Group37.bufferSize = 50M
+Group37.router = PayloadMessageRouter
+Group37.movementModel = MapBasedStationaryMovement
+Group37.speed = 0, 0
+Group37.nrofHosts = 1
+Group37.nrofInterfaces = 1
+Group37.interface1 = btInterface
+
+Group38.groupID=HotSpot_37_
+Group38.bufferSize = 50M
+Group38.router = PayloadMessageRouter
+Group38.movementModel = MapBasedStationaryMovement
+Group38.speed = 0, 0
+Group38.nrofHosts = 1
+Group38.nrofInterfaces = 1
+Group38.interface1 = btInterface
+
+Group39.groupID=HotSpot_38_
+Group39.bufferSize = 50M
+Group39.router = PayloadMessageRouter
+Group39.movementModel = MapBasedStationaryMovement
+Group39.speed = 0, 0
+Group39.nrofHosts = 1
+Group39.nrofInterfaces = 1
+Group39.interface1 = btInterface
+
+Group40.groupID=HotSpot_39_
+Group40.bufferSize = 50M
+Group40.router = PayloadMessageRouter
+Group40.movementModel = MapBasedStationaryMovement
+Group40.speed = 0, 0
+Group40.nrofHosts = 1
+Group40.nrofInterfaces = 1
+Group40.interface1 = btInterface
+
+Group41.groupID=HotSpot_40_
+Group41.bufferSize = 50M
+Group41.router = PayloadMessageRouter
+Group41.movementModel = MapBasedStationaryMovement
+Group41.speed = 0, 0
+Group41.nrofHosts = 1
+Group41.nrofInterfaces = 1
+Group41.interface1 = btInterface
+
+Group42.groupID=HotSpot_41_
+Group42.bufferSize = 50M
+Group42.router = PayloadMessageRouter
+Group42.movementModel = MapBasedStationaryMovement
+Group42.speed = 0, 0
+Group42.nrofHosts = 1
+Group42.nrofInterfaces = 1
+Group42.interface1 = btInterface
+
+Group43.groupID=HotSpot_42_
+Group43.bufferSize = 50M
+Group43.router = PayloadMessageRouter
+Group43.movementModel = MapBasedStationaryMovement
+Group43.speed = 0, 0
+Group43.nrofHosts = 1
+Group43.nrofInterfaces = 1
+Group43.interface1 = btInterface
+
+Group44.groupID=HotSpot_43_
+Group44.bufferSize = 50M
+Group44.router = PayloadMessageRouter
+Group44.movementModel = MapBasedStationaryMovement
+Group44.speed = 0, 0
+Group44.nrofHosts = 1
+Group44.nrofInterfaces = 1
+Group44.interface1 = btInterface
+
+Group45.groupID=HotSpot_44_
+Group45.bufferSize = 50M
+Group45.router = PayloadMessageRouter
+Group45.movementModel = MapBasedStationaryMovement
+Group45.speed = 0, 0
+Group45.nrofHosts = 1
+Group45.nrofInterfaces = 1
+Group45.interface1 = btInterface
+
+Group46.groupID=HotSpot_45_
+Group46.bufferSize = 50M
+Group46.router = PayloadMessageRouter
+Group46.movementModel = MapBasedStationaryMovement
+Group46.speed = 0, 0
+Group46.nrofHosts = 1
+Group46.nrofInterfaces = 1
+Group46.interface1 = btInterface
+
+Group47.groupID=HotSpot_46_
+Group47.bufferSize = 50M
+Group47.router = PayloadMessageRouter
+Group47.movementModel = MapBasedStationaryMovement
+Group47.speed = 0, 0
+Group47.nrofHosts = 1
+Group47.nrofInterfaces = 1
+Group47.interface1 = btInterface
+
+Group48.groupID=HotSpot_47_
+Group48.bufferSize = 50M
+Group48.router = PayloadMessageRouter
+Group48.movementModel = MapBasedStationaryMovement
+Group48.speed = 0, 0
+Group48.nrofHosts = 1
+Group48.nrofInterfaces = 1
+Group48.interface1 = btInterface
+
+Group49.groupID=HotSpot_48_
+Group49.bufferSize = 50M
+Group49.router = PayloadMessageRouter
+Group49.movementModel = MapBasedStationaryMovement
+Group49.speed = 0, 0
+Group49.nrofHosts = 1
+Group49.nrofInterfaces = 1
+Group49.interface1 = btInterface
+
+Group50.groupID=HotSpot_49_
+Group50.bufferSize = 50M
+Group50.router = PayloadMessageRouter
+Group50.movementModel = MapBasedStationaryMovement
+Group50.speed = 0, 0
+Group50.nrofHosts = 1
+Group50.nrofInterfaces = 1
+Group50.interface1 = btInterface
+
+Group51.groupID=HotSpot_50_
+Group51.bufferSize = 50M
+Group51.router = PayloadMessageRouter
+Group51.movementModel = MapBasedStationaryMovement
+Group51.speed = 0, 0
+Group51.nrofHosts = 1
+Group51.nrofInterfaces = 1
+Group51.interface1 = btInterface
+
+Group52.groupID=HotSpot_51_
+Group52.bufferSize = 50M
+Group52.router = PayloadMessageRouter
+Group52.movementModel = MapBasedStationaryMovement
+Group52.speed = 0, 0
+Group52.nrofHosts = 1
+Group52.nrofInterfaces = 1
+Group52.interface1 = btInterface
+
+Group53.groupID=HotSpot_52_
+Group53.bufferSize = 50M
+Group53.router = PayloadMessageRouter
+Group53.movementModel = MapBasedStationaryMovement
+Group53.speed = 0, 0
+Group53.nrofHosts = 1
+Group53.nrofInterfaces = 1
+Group53.interface1 = btInterface
+
+Group54.groupID=HotSpot_53_
+Group54.bufferSize = 50M
+Group54.router = PayloadMessageRouter
+Group54.movementModel = MapBasedStationaryMovement
+Group54.speed = 0, 0
+Group54.nrofHosts = 1
+Group54.nrofInterfaces = 1
+Group54.interface1 = btInterface
+
+Group55.groupID=HotSpot_54_
+Group55.bufferSize = 50M
+Group55.router = PayloadMessageRouter
+Group55.movementModel = MapBasedStationaryMovement
+Group55.speed = 0, 0
+Group55.nrofHosts = 1
+Group55.nrofInterfaces = 1
+Group55.interface1 = btInterface
+
+Group56.groupID=HotSpot_55_
+Group56.bufferSize = 50M
+Group56.router = PayloadMessageRouter
+Group56.movementModel = MapBasedStationaryMovement
+Group56.speed = 0, 0
+Group56.nrofHosts = 1
+Group56.nrofInterfaces = 1
+Group56.interface1 = btInterface
+
+Group57.groupID=HotSpot_56_
+Group57.bufferSize = 50M
+Group57.router = PayloadMessageRouter
+Group57.movementModel = MapBasedStationaryMovement
+Group57.speed = 0, 0
+Group57.nrofHosts = 1
+Group57.nrofInterfaces = 1
+Group57.interface1 = btInterface
+
+Group58.groupID=HotSpot_57_
+Group58.bufferSize = 50M
+Group58.router = PayloadMessageRouter
+Group58.movementModel = MapBasedStationaryMovement
+Group58.speed = 0, 0
+Group58.nrofHosts = 1
+Group58.nrofInterfaces = 1
+Group58.interface1 = btInterface
+
+Group59.groupID=HotSpot_58_
+Group59.bufferSize = 50M
+Group59.router = PayloadMessageRouter
+Group59.movementModel = MapBasedStationaryMovement
+Group59.speed = 0, 0
+Group59.nrofHosts = 1
+Group59.nrofInterfaces = 1
+Group59.interface1 = btInterface
+
+Group60.groupID=HotSpot_59_
+Group60.bufferSize = 50M
+Group60.router = PayloadMessageRouter
+Group60.movementModel = MapBasedStationaryMovement
+Group60.speed = 0, 0
+Group60.nrofHosts = 1
+Group60.nrofInterfaces = 1
+Group60.interface1 = btInterface
+
+Group61.groupID=HotSpot_60_
+Group61.bufferSize = 50M
+Group61.router = PayloadMessageRouter
+Group61.movementModel = MapBasedStationaryMovement
+Group61.speed = 0, 0
+Group61.nrofHosts = 1
+Group61.nrofInterfaces = 1
+Group61.interface1 = btInterface
+
+Group62.groupID=HotSpot_61_
+Group62.bufferSize = 50M
+Group62.router = PayloadMessageRouter
+Group62.movementModel = MapBasedStationaryMovement
+Group62.speed = 0, 0
+Group62.nrofHosts = 1
+Group62.nrofInterfaces = 1
+Group62.interface1 = btInterface
+
+Group63.groupID=HotSpot_62_
+Group63.bufferSize = 50M
+Group63.router = PayloadMessageRouter
+Group63.movementModel = MapBasedStationaryMovement
+Group63.speed = 0, 0
+Group63.nrofHosts = 1
+Group63.nrofInterfaces = 1
+Group63.interface1 = btInterface
+
+Group64.groupID=HotSpot_63_
+Group64.bufferSize = 50M
+Group64.router = PayloadMessageRouter
+Group64.movementModel = MapBasedStationaryMovement
+Group64.speed = 0, 0
+Group64.nrofHosts = 1
+Group64.nrofInterfaces = 1
+Group64.interface1 = btInterface
+
+Group65.groupID=HotSpot_64_
+Group65.bufferSize = 50M
+Group65.router = PayloadMessageRouter
+Group65.movementModel = MapBasedStationaryMovement
+Group65.speed = 0, 0
+Group65.nrofHosts = 1
+Group65.nrofInterfaces = 1
+Group65.interface1 = btInterface
+
+Group66.groupID=HotSpot_TO
+Group66.bufferSize = 50M
+Group66.router = PayloadMessageRouter
+Group66.movementModel = StationaryMovement
+Group66.speed = 0, 0
+Group66.nodeLocation = 4500,3400
+Group66.nrofHosts = 1
+Group66.nrofInterfaces = 1
+Group66.interface1 = btInterface
+
+Events.nrof = 64
+
+Events1.class = MessageEventGenerator
+Events1.interval = 1,1
+Events1.size = 500k,1M
+Events1.hosts = 800, 800
+Events1.tohosts = 864, 864
+Events1.prefix = M
+Events1.activehotspot = false
+
+Events2.class = MessageEventGenerator
+Events2.interval = 1,1
+Events2.size = 500k,1M
+Events2.hosts = 801, 801
+Events2.tohosts = 864, 864
+Events2.prefix = M
+Events2.activehotspot = true
+
+Events3.class = MessageEventGenerator
+Events3.interval = 1,1
+Events3.size = 500k,1M
+Events3.hosts = 802, 802
+Events3.tohosts = 864, 864
+Events3.prefix = M
+Events3.activehotspot = true
+
+Events4.class = MessageEventGenerator
+Events4.interval = 1,1
+Events4.size = 500k,1M
+Events4.hosts = 803, 803
+Events4.tohosts = 864, 864
+Events4.prefix = M
+Events4.activehotspot = false
+
+Events5.class = MessageEventGenerator
+Events5.interval = 1,1
+Events5.size = 500k,1M
+Events5.hosts = 804, 804
+Events5.tohosts = 864, 864
+Events5.prefix = M
+Events5.activehotspot = false
+
+Events6.class = MessageEventGenerator
+Events6.interval = 1,1
+Events6.size = 500k,1M
+Events6.hosts = 805, 805
+Events6.tohosts = 864, 864
+Events6.prefix = M
+Events6.activehotspot = false
+
+Events7.class = MessageEventGenerator
+Events7.interval = 1,1
+Events7.size = 500k,1M
+Events7.hosts = 806, 806
+Events7.tohosts = 864, 864
+Events7.prefix = M
+Events7.activehotspot = false
+
+Events8.class = MessageEventGenerator
+Events8.interval = 1,1
+Events8.size = 500k,1M
+Events8.hosts = 807, 807
+Events8.tohosts = 864, 864
+Events8.prefix = M
+Events8.activehotspot = false
+
+Events9.class = MessageEventGenerator
+Events9.interval = 1,1
+Events9.size = 500k,1M
+Events9.hosts = 808, 808
+Events9.tohosts = 864, 864
+Events9.prefix = M
+Events9.activehotspot = false
+
+Events10.class = MessageEventGenerator
+Events10.interval = 1,1
+Events10.size = 500k,1M
+Events10.hosts = 809, 809
+Events10.tohosts = 864, 864
+Events10.prefix = M
+Events10.activehotspot = false
+
+Events11.class = MessageEventGenerator
+Events11.interval = 1,1
+Events11.size = 500k,1M
+Events11.hosts = 810, 810
+Events11.tohosts = 864, 864
+Events11.prefix = M
+Events11.activehotspot = false
+
+Events12.class = MessageEventGenerator
+Events12.interval = 1,1
+Events12.size = 500k,1M
+Events12.hosts = 811, 811
+Events12.tohosts = 864, 864
+Events12.prefix = M
+Events12.activehotspot = false
+
+Events13.class = MessageEventGenerator
+Events13.interval = 1,1
+Events13.size = 500k,1M
+Events13.hosts = 812, 812
+Events13.tohosts = 864, 864
+Events13.prefix = M
+Events13.activehotspot = false
+
+Events14.class = MessageEventGenerator
+Events14.interval = 1,1
+Events14.size = 500k,1M
+Events14.hosts = 813, 813
+Events14.tohosts = 864, 864
+Events14.prefix = M
+Events14.activehotspot = false
+
+Events15.class = MessageEventGenerator
+Events15.interval = 1,1
+Events15.size = 500k,1M
+Events15.hosts = 814, 814
+Events15.tohosts = 864, 864
+Events15.prefix = M
+Events15.activehotspot = false
+
+Events16.class = MessageEventGenerator
+Events16.interval = 1,1
+Events16.size = 500k,1M
+Events16.hosts = 815, 815
+Events16.tohosts = 864, 864
+Events16.prefix = M
+Events16.activehotspot = true
+
+Events17.class = MessageEventGenerator
+Events17.interval = 1,1
+Events17.size = 500k,1M
+Events17.hosts = 816, 816
+Events17.tohosts = 864, 864
+Events17.prefix = M
+Events17.activehotspot = false
+
+Events18.class = MessageEventGenerator
+Events18.interval = 1,1
+Events18.size = 500k,1M
+Events18.hosts = 817, 817
+Events18.tohosts = 864, 864
+Events18.prefix = M
+Events18.activehotspot = true
+
+Events19.class = MessageEventGenerator
+Events19.interval = 1,1
+Events19.size = 500k,1M
+Events19.hosts = 818, 818
+Events19.tohosts = 864, 864
+Events19.prefix = M
+Events19.activehotspot = false
+
+Events20.class = MessageEventGenerator
+Events20.interval = 1,1
+Events20.size = 500k,1M
+Events20.hosts = 819, 819
+Events20.tohosts = 864, 864
+Events20.prefix = M
+Events20.activehotspot = false
+
+Events21.class = MessageEventGenerator
+Events21.interval = 1,1
+Events21.size = 500k,1M
+Events21.hosts = 820, 820
+Events21.tohosts = 864, 864
+Events21.prefix = M
+Events21.activehotspot = true
+
+Events22.class = MessageEventGenerator
+Events22.interval = 1,1
+Events22.size = 500k,1M
+Events22.hosts = 821, 821
+Events22.tohosts = 864, 864
+Events22.prefix = M
+Events22.activehotspot = false
+
+Events23.class = MessageEventGenerator
+Events23.interval = 1,1
+Events23.size = 500k,1M
+Events23.hosts = 822, 822
+Events23.tohosts = 864, 864
+Events23.prefix = M
+Events23.activehotspot = false
+
+Events24.class = MessageEventGenerator
+Events24.interval = 1,1
+Events24.size = 500k,1M
+Events24.hosts = 823, 823
+Events24.tohosts = 864, 864
+Events24.prefix = M
+Events24.activehotspot = false
+
+Events25.class = MessageEventGenerator
+Events25.interval = 1,1
+Events25.size = 500k,1M
+Events25.hosts = 824, 824
+Events25.tohosts = 864, 864
+Events25.prefix = M
+Events25.activehotspot = false
+
+Events26.class = MessageEventGenerator
+Events26.interval = 1,1
+Events26.size = 500k,1M
+Events26.hosts = 825, 825
+Events26.tohosts = 864, 864
+Events26.prefix = M
+Events26.activehotspot = false
+
+Events27.class = MessageEventGenerator
+Events27.interval = 1,1
+Events27.size = 500k,1M
+Events27.hosts = 826, 826
+Events27.tohosts = 864, 864
+Events27.prefix = M
+Events27.activehotspot = false
+
+Events28.class = MessageEventGenerator
+Events28.interval = 1,1
+Events28.size = 500k,1M
+Events28.hosts = 827, 827
+Events28.tohosts = 864, 864
+Events28.prefix = M
+Events28.activehotspot = true
+
+Events29.class = MessageEventGenerator
+Events29.interval = 1,1
+Events29.size = 500k,1M
+Events29.hosts = 828, 828
+Events29.tohosts = 864, 864
+Events29.prefix = M
+Events29.activehotspot = false
+
+Events30.class = MessageEventGenerator
+Events30.interval = 1,1
+Events30.size = 500k,1M
+Events30.hosts = 829, 829
+Events30.tohosts = 864, 864
+Events30.prefix = M
+Events30.activehotspot = false
+
+Events31.class = MessageEventGenerator
+Events31.interval = 1,1
+Events31.size = 500k,1M
+Events31.hosts = 830, 830
+Events31.tohosts = 864, 864
+Events31.prefix = M
+Events31.activehotspot = false
+
+Events32.class = MessageEventGenerator
+Events32.interval = 1,1
+Events32.size = 500k,1M
+Events32.hosts = 831, 831
+Events32.tohosts = 864, 864
+Events32.prefix = M
+Events32.activehotspot = false
+
+Events33.class = MessageEventGenerator
+Events33.interval = 1,1
+Events33.size = 500k,1M
+Events33.hosts = 832, 832
+Events33.tohosts = 864, 864
+Events33.prefix = M
+Events33.activehotspot = false
+
+Events34.class = MessageEventGenerator
+Events34.interval = 1,1
+Events34.size = 500k,1M
+Events34.hosts = 833, 833
+Events34.tohosts = 864, 864
+Events34.prefix = M
+Events34.activehotspot = false
+
+Events35.class = MessageEventGenerator
+Events35.interval = 1,1
+Events35.size = 500k,1M
+Events35.hosts = 834, 834
+Events35.tohosts = 864, 864
+Events35.prefix = M
+Events35.activehotspot = false
+
+Events36.class = MessageEventGenerator
+Events36.interval = 1,1
+Events36.size = 500k,1M
+Events36.hosts = 835, 835
+Events36.tohosts = 864, 864
+Events36.prefix = M
+Events36.activehotspot = false
+
+Events37.class = MessageEventGenerator
+Events37.interval = 1,1
+Events37.size = 500k,1M
+Events37.hosts = 836, 836
+Events37.tohosts = 864, 864
+Events37.prefix = M
+Events37.activehotspot = false
+
+Events38.class = MessageEventGenerator
+Events38.interval = 1,1
+Events38.size = 500k,1M
+Events38.hosts = 837, 837
+Events38.tohosts = 864, 864
+Events38.prefix = M
+Events38.activehotspot = true
+
+Events39.class = MessageEventGenerator
+Events39.interval = 1,1
+Events39.size = 500k,1M
+Events39.hosts = 838, 838
+Events39.tohosts = 864, 864
+Events39.prefix = M
+Events39.activehotspot = false
+
+Events40.class = MessageEventGenerator
+Events40.interval = 1,1
+Events40.size = 500k,1M
+Events40.hosts = 839, 839
+Events40.tohosts = 864, 864
+Events40.prefix = M
+Events40.activehotspot = false
+
+Events41.class = MessageEventGenerator
+Events41.interval = 1,1
+Events41.size = 500k,1M
+Events41.hosts = 840, 840
+Events41.tohosts = 864, 864
+Events41.prefix = M
+Events41.activehotspot = false
+
+Events42.class = MessageEventGenerator
+Events42.interval = 1,1
+Events42.size = 500k,1M
+Events42.hosts = 841, 841
+Events42.tohosts = 864, 864
+Events42.prefix = M
+Events42.activehotspot = false
+
+Events43.class = MessageEventGenerator
+Events43.interval = 1,1
+Events43.size = 500k,1M
+Events43.hosts = 842, 842
+Events43.tohosts = 864, 864
+Events43.prefix = M
+Events43.activehotspot = false
+
+Events44.class = MessageEventGenerator
+Events44.interval = 1,1
+Events44.size = 500k,1M
+Events44.hosts = 843, 843
+Events44.tohosts = 864, 864
+Events44.prefix = M
+Events44.activehotspot = false
+
+Events45.class = MessageEventGenerator
+Events45.interval = 1,1
+Events45.size = 500k,1M
+Events45.hosts = 844, 844
+Events45.tohosts = 864, 864
+Events45.prefix = M
+Events45.activehotspot = false
+
+Events46.class = MessageEventGenerator
+Events46.interval = 1,1
+Events46.size = 500k,1M
+Events46.hosts = 845, 845
+Events46.tohosts = 864, 864
+Events46.prefix = M
+Events46.activehotspot = false
+
+Events47.class = MessageEventGenerator
+Events47.interval = 1,1
+Events47.size = 500k,1M
+Events47.hosts = 846, 846
+Events47.tohosts = 864, 864
+Events47.prefix = M
+Events47.activehotspot = true
+
+Events48.class = MessageEventGenerator
+Events48.interval = 1,1
+Events48.size = 500k,1M
+Events48.hosts = 847, 847
+Events48.tohosts = 864, 864
+Events48.prefix = M
+Events48.activehotspot = false
+
+Events49.class = MessageEventGenerator
+Events49.interval = 1,1
+Events49.size = 500k,1M
+Events49.hosts = 848, 848
+Events49.tohosts = 864, 864
+Events49.prefix = M
+Events49.activehotspot = false
+
+Events50.class = MessageEventGenerator
+Events50.interval = 1,1
+Events50.size = 500k,1M
+Events50.hosts = 849, 849
+Events50.tohosts = 864, 864
+Events50.prefix = M
+Events50.activehotspot = false
+
+Events51.class = MessageEventGenerator
+Events51.interval = 1,1
+Events51.size = 500k,1M
+Events51.hosts = 850, 850
+Events51.tohosts = 864, 864
+Events51.prefix = M
+Events51.activehotspot = false
+
+Events52.class = MessageEventGenerator
+Events52.interval = 1,1
+Events52.size = 500k,1M
+Events52.hosts = 851, 851
+Events52.tohosts = 864, 864
+Events52.prefix = M
+Events52.activehotspot = false
+
+Events53.class = MessageEventGenerator
+Events53.interval = 1,1
+Events53.size = 500k,1M
+Events53.hosts = 852, 852
+Events53.tohosts = 864, 864
+Events53.prefix = M
+Events53.activehotspot = false
+
+Events54.class = MessageEventGenerator
+Events54.interval = 1,1
+Events54.size = 500k,1M
+Events54.hosts = 853, 853
+Events54.tohosts = 864, 864
+Events54.prefix = M
+Events54.activehotspot = false
+
+Events55.class = MessageEventGenerator
+Events55.interval = 1,1
+Events55.size = 500k,1M
+Events55.hosts = 854, 854
+Events55.tohosts = 864, 864
+Events55.prefix = M
+Events55.activehotspot = false
+
+Events56.class = MessageEventGenerator
+Events56.interval = 1,1
+Events56.size = 500k,1M
+Events56.hosts = 855, 855
+Events56.tohosts = 864, 864
+Events56.prefix = M
+Events56.activehotspot = false
+
+Events57.class = MessageEventGenerator
+Events57.interval = 1,1
+Events57.size = 500k,1M
+Events57.hosts = 856, 856
+Events57.tohosts = 864, 864
+Events57.prefix = M
+Events57.activehotspot = false
+
+Events58.class = MessageEventGenerator
+Events58.interval = 1,1
+Events58.size = 500k,1M
+Events58.hosts = 857, 857
+Events58.tohosts = 864, 864
+Events58.prefix = M
+Events58.activehotspot = false
+
+Events59.class = MessageEventGenerator
+Events59.interval = 1,1
+Events59.size = 500k,1M
+Events59.hosts = 858, 858
+Events59.tohosts = 864, 864
+Events59.prefix = M
+Events59.activehotspot = false
+
+Events60.class = MessageEventGenerator
+Events60.interval = 1,1
+Events60.size = 500k,1M
+Events60.hosts = 859, 859
+Events60.tohosts = 864, 864
+Events60.prefix = M
+Events60.activehotspot = false
+
+Events61.class = MessageEventGenerator
+Events61.interval = 1,1
+Events61.size = 500k,1M
+Events61.hosts = 860, 860
+Events61.tohosts = 864, 864
+Events61.prefix = M
+Events61.activehotspot = true
+
+Events62.class = MessageEventGenerator
+Events62.interval = 1,1
+Events62.size = 500k,1M
+Events62.hosts = 861, 861
+Events62.tohosts = 864, 864
+Events62.prefix = M
+Events62.activehotspot = false
+
+Events63.class = MessageEventGenerator
+Events63.interval = 1,1
+Events63.size = 500k,1M
+Events63.hosts = 862, 862
+Events63.tohosts = 864, 864
+Events63.prefix = M
+Events63.activehotspot = false
+
+Events64.class = MessageEventGenerator
+Events64.interval = 1,1
+Events64.size = 500k,1M
+Events64.hosts = 863, 863
+Events64.tohosts = 864, 864
+Events64.prefix = M
+Events64.activehotspot = true
+
+MovementModel.rngSeed = 1
+MovementModel.worldSize = 4500, 3400
+MovementModel.warmup = 1000
+MapBasedMovement.nrofMapFiles = 4
+MapBasedMovement.mapFile1 = data/roads.wkt
+MapBasedMovement.mapFile2 = data/main_roads.wkt
+MapBasedMovement.mapFile3 = data/pedestrian_paths.wkt
+MapBasedMovement.mapFile4 = data/shops.wkt
+
+Optimization.cellSizeMult = 5
+Optimization.randomizeUpdateOrder = true
+
+Report.nrofReports = 2
+Report.warmup = 0
+Report.reportDir = relatorios/
+Report.report1 = CreatedMessagesReport
+MessageLocationReport.granularity = 1
+MessageLocationReport.messages = 1
+Report.report2 = MessagesPerHostReport
+Report.granularity = 239
+ProphetRouter.secondsInTimeUnit = 30
+SprayAndWaitRouter.nrofCopies = 6
+SprayAndWaitRouter.binaryMode = true
+
+GUI.UnderlayImage.fileName = data/helsinki_underlay.png
+GUI.UnderlayImage.offset = 64, 20
+GUI.UnderlayImage.scale = 4.75
+GUI.UnderlayImage.rotate = -0.015
+GUI.EventLogPanel.nrofEvents = 100
+
