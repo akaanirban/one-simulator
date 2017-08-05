@@ -35,9 +35,8 @@ public class DTNHost implements Comparable<DTNHost> {
 	private List<MovementListener> movListeners;
 	private List<NetworkInterface> net;
 	private ModuleCommunicationBus comBus;
-
-	private boolean HOTSPOT_FLAG; //flag set if it is a hotspot.
-	private Message Aggregate_Message; // Aggregate message at any moment to a router.
+    private Message Aggregate_Message; // Aggregate message at any moment to a router.
+    private boolean hotspotFlag = false;
 
 	static {
 		DTNSim.registerForReset(DTNHost.class.getCanonicalName());
@@ -92,6 +91,10 @@ public class DTNHost implements Comparable<DTNHost> {
 				l.initialLocation(this, this.location);
 			}
 		}
+        //if movement model contains the string stationary set the hotspot flag
+		if(mmProto.toString().toLowerCase().contains("stationary")){
+		    setHotspotFlag(true);
+        }
 	}
 
 	/**
@@ -541,17 +544,11 @@ public class DTNHost implements Comparable<DTNHost> {
 		return this.getAddress() - h.getAddress();
 	}
 
-	/**
-	 * Sets the Nodes hotspot capability.
-	 * @return Sets True if the DTNHost is a hotspot else sets False
-	 */
-	public void setHotSpot(boolean HotSpot_Flag){ this.HOTSPOT_FLAG = HotSpot_Flag;}
 
 	/**
 	 * Checking whether the DTN Host is a hotspot or not.
 	 * @return True if the DTNHost is a hotspot else return False
 	 */
-	public boolean isHotSpot(){ return HOTSPOT_FLAG;}
 
 	/**
 	 * Set an aggregate message for transferring
@@ -564,9 +561,28 @@ public class DTNHost implements Comparable<DTNHost> {
 	}
 
 	/**
-	 * Returns the aggregate message associated withe ach node
+	 * Returns the aggregate message associated with each node
 	 * */
 	public Message getAggregateMessage(){
 		return this.Aggregate_Message;
 	}
+
+
+    /**
+     * Set a router for this host
+     * @param flag The flag to set
+     */
+    private void setHotspotFlag(boolean flag) {
+        this.hotspotFlag = flag;
+    }
+
+    /**
+     * Returns hotspot flag of this host
+     * @return the boolean hot spot flag of this host
+     */
+    public boolean getHotspotFlag() {
+        return this.hotspotFlag;
+    }
+
+
 }

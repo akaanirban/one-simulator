@@ -38,7 +38,7 @@ def writeMovingGroup(filename, groupID, groupNo):
     file.write("Group{}.waitTime = 10, 30\n".format(groupNo))
     file.write("Group{}.speed = 90, 90\n".format(groupNo))
     file.write("Group{}.nrofHosts = 800\n".format(groupNo))
-    file.write("Group{}.nrofInterfaces = 1\n".format(groupNo))
+    file.write("Group{}.nrofInterfaces = 1\n".format(groupNo))    
     file.write("Group{}.interface1 = btInterface\n".format(groupNo))
     file.write("\n")
     file.close   

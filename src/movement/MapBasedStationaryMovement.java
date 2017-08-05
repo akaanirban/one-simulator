@@ -38,6 +38,7 @@ public class MapBasedStationaryMovement extends MovementModel {
 	/** map file -setting id ({@value})*/
 	public static final String FILE_S = "mapFile";
 
+
 	/**
 	 * Per node group setting for selecting map node types that are OK for
 	 * this node group to traverse trough. Value must be a comma separated list
@@ -46,6 +47,7 @@ public class MapBasedStationaryMovement extends MovementModel {
 	 * considered OK.
 	 */
 	public static final String MAP_SELECT_S = "okMaps";
+
 
 	/** the indexes of the OK map files or null if all maps are OK */
 	private int [] okMapNodeTypes;

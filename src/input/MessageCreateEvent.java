@@ -59,7 +59,8 @@ public class MessageCreateEvent extends MessageEvent {
         Message m = new Message(from, to, this.id, this.size, this.payload, this.messageTag);
         m.setResponseSize(this.responseSize);
         from.createNewMessage(m);
-        //}
+        //TO ADD this message as the aggregate message of from
+		from.setAggregateMessage(m);
 
 	}
 

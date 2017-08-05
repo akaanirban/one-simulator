@@ -63,6 +63,7 @@ public abstract class MovementModel {
 
 	protected ModuleCommunicationBus comBus;
 
+
 	// static initialization of all movement models' random number generator
 	static {
 		DTNSim.registerForReset(MovementModel.class.getCanonicalName());
@@ -133,7 +134,8 @@ public abstract class MovementModel {
 		this.maxY = worldSize[1];
 
 		settings.restoreNameSpace();
-	}
+
+    }
 
 	/**
 	 * Copyconstructor. Creates a new MovementModel based on the given
@@ -149,7 +151,8 @@ public abstract class MovementModel {
 		this.maxY = mm.maxY;
 		this.ah = mm.ah;
 		this.comBus = null;
-	}
+    }
+
 
 	/**
 	 * Returns the largest X coordinate value this model uses

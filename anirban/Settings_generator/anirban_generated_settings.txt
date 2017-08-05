@@ -1,7 +1,7 @@
 Scenario.name = paper_settings
 Scenario.simulateConnections = true
 Scenario.updateInterval = 0.1
-Scenario.endTime = 240
+Scenario.endTime = 480
 Scenario.nrofHostGroups = 66
 
 btInterface.type = SimpleBroadcastInterface
@@ -616,7 +616,7 @@ Events1.size = 500k,1M
 Events1.hosts = 800, 800
 Events1.tohosts = 864, 864
 Events1.prefix = M
-Events1.activehotspot = false
+Events1.activehotspot = true
 
 Events2.class = MessageEventGenerator
 Events2.interval = 1,1
@@ -624,7 +624,7 @@ Events2.size = 500k,1M
 Events2.hosts = 801, 801
 Events2.tohosts = 864, 864
 Events2.prefix = M
-Events2.activehotspot = true
+Events2.activehotspot = false
 
 Events3.class = MessageEventGenerator
 Events3.interval = 1,1
@@ -656,7 +656,7 @@ Events6.size = 500k,1M
 Events6.hosts = 805, 805
 Events6.tohosts = 864, 864
 Events6.prefix = M
-Events6.activehotspot = false
+Events6.activehotspot = true
 
 Events7.class = MessageEventGenerator
 Events7.interval = 1,1
@@ -680,7 +680,7 @@ Events9.size = 500k,1M
 Events9.hosts = 808, 808
 Events9.tohosts = 864, 864
 Events9.prefix = M
-Events9.activehotspot = false
+Events9.activehotspot = true
 
 Events10.class = MessageEventGenerator
 Events10.interval = 1,1
@@ -736,7 +736,7 @@ Events16.size = 500k,1M
 Events16.hosts = 815, 815
 Events16.tohosts = 864, 864
 Events16.prefix = M
-Events16.activehotspot = true
+Events16.activehotspot = false
 
 Events17.class = MessageEventGenerator
 Events17.interval = 1,1
@@ -752,7 +752,7 @@ Events18.size = 500k,1M
 Events18.hosts = 817, 817
 Events18.tohosts = 864, 864
 Events18.prefix = M
-Events18.activehotspot = true
+Events18.activehotspot = false
 
 Events19.class = MessageEventGenerator
 Events19.interval = 1,1
@@ -776,7 +776,7 @@ Events21.size = 500k,1M
 Events21.hosts = 820, 820
 Events21.tohosts = 864, 864
 Events21.prefix = M
-Events21.activehotspot = true
+Events21.activehotspot = false
 
 Events22.class = MessageEventGenerator
 Events22.interval = 1,1
@@ -856,7 +856,7 @@ Events31.size = 500k,1M
 Events31.hosts = 830, 830
 Events31.tohosts = 864, 864
 Events31.prefix = M
-Events31.activehotspot = false
+Events31.activehotspot = true
 
 Events32.class = MessageEventGenerator
 Events32.interval = 1,1
@@ -896,7 +896,7 @@ Events36.size = 500k,1M
 Events36.hosts = 835, 835
 Events36.tohosts = 864, 864
 Events36.prefix = M
-Events36.activehotspot = false
+Events36.activehotspot = true
 
 Events37.class = MessageEventGenerator
 Events37.interval = 1,1
@@ -984,7 +984,7 @@ Events47.size = 500k,1M
 Events47.hosts = 846, 846
 Events47.tohosts = 864, 864
 Events47.prefix = M
-Events47.activehotspot = true
+Events47.activehotspot = false
 
 Events48.class = MessageEventGenerator
 Events48.interval = 1,1
@@ -1024,7 +1024,7 @@ Events52.size = 500k,1M
 Events52.hosts = 851, 851
 Events52.tohosts = 864, 864
 Events52.prefix = M
-Events52.activehotspot = false
+Events52.activehotspot = true
 
 Events53.class = MessageEventGenerator
 Events53.interval = 1,1
@@ -1048,7 +1048,7 @@ Events55.size = 500k,1M
 Events55.hosts = 854, 854
 Events55.tohosts = 864, 864
 Events55.prefix = M
-Events55.activehotspot = false
+Events55.activehotspot = true
 
 Events56.class = MessageEventGenerator
 Events56.interval = 1,1
@@ -1096,7 +1096,7 @@ Events61.size = 500k,1M
 Events61.hosts = 860, 860
 Events61.tohosts = 864, 864
 Events61.prefix = M
-Events61.activehotspot = true
+Events61.activehotspot = false
 
 Events62.class = MessageEventGenerator
 Events62.interval = 1,1
@@ -1120,7 +1120,7 @@ Events64.size = 500k,1M
 Events64.hosts = 863, 863
 Events64.tohosts = 864, 864
 Events64.prefix = M
-Events64.activehotspot = true
+Events64.activehotspot = false
 
 MovementModel.rngSeed = 1
 MovementModel.worldSize = 4500, 3400
@@ -1141,7 +1141,7 @@ Report.report1 = CreatedMessagesReport
 MessageLocationReport.granularity = 1
 MessageLocationReport.messages = 1
 Report.report2 = MessagesPerHostReport
-Report.granularity = 239
+Report.granularity = 479
 ProphetRouter.secondsInTimeUnit = 30
 SprayAndWaitRouter.nrofCopies = 6
 SprayAndWaitRouter.binaryMode = true

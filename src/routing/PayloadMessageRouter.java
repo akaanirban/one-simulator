@@ -84,14 +84,17 @@ public class PayloadMessageRouter extends ActiveRouter {
          * create a n aggregate message here in the host and
          * sets the aggregate message value of host.
          * */
-        //get the new aggregate message for this router Host
-        Message newAggregateMessage = generateAggregateMessage(m);
-        if (newAggregateMessage != null){
-            //set the new aggregate message in the Host property
-            this.getHost().setAggregateMessage(newAggregateMessage);
-            //add the new aggregate message in the host message buffer
-            this.createNewMessage(newAggregateMessage);
+        //get the new aggregate message for this router Host only if this is not a router
+        if(!this.getHost().getHotspotFlag()){
+            Message newAggregateMessage = generateAggregateMessage(m);
+            if (newAggregateMessage != null){
+                //set the new aggregate message in the Host property
+                this.getHost().setAggregateMessage(newAggregateMessage);
+                //add the new aggregate message in the host message buffer
+                this.createNewMessage(newAggregateMessage);
+            }
         }
+
 
         /**
          *  N.B. With application support the following if-block
@@ -135,6 +138,8 @@ public class PayloadMessageRouter extends ActiveRouter {
             }
         }
 */
+
+
         if (this.getHost().getAggregateMessage() == null || getConnections().size() == 0){
             return new ArrayList<Tuple<Message, Connection>>(0);
         }
@@ -171,6 +176,7 @@ public class PayloadMessageRouter extends ActiveRouter {
 
         // Try first the messages that can be delivered to final recipient
         if (exchangeDeliverableMessages() != null) {
+            //System.out.println("here");
             return; // started a transfer, don't try others (yet)
         }
 
