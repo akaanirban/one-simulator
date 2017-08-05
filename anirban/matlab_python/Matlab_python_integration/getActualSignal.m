@@ -5,7 +5,7 @@
 
 % problem data
 function [result] = getActualSignal(A, y)
-  Phi  = sparse(A)
+  Phi  = sparse(A);
   %x0 = [1 0 1 0]';    % original signal
   %x0 = m';
   Y  = y';          % measurements with no noise
