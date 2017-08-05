@@ -8,7 +8,7 @@ from Vehicle import Vehicle
 import matlab.engine
 import numpy as np
 import math
-
+from collections import Counter
 
 #etracts the contents and tags from the message perhost report
 def extractContentTag(filename, resultFilename):
@@ -92,12 +92,21 @@ def getRecoveryRatio(X, Xhat, theta):
                 lam = lam +1
     return lam/len(X)
 
+
+def getUniqueTags(contenttags):
+    count = Counter(tuple(e) for e in contenttags)
+    contenttag = []
+    for key in sorted(count.keys()):
+        contenttag.append(list(key))
+    return contenttag
     
 if __name__ == "__main__":
     Vehicles = extractContentTag("paper_settings_MessagesPerHostReport.txt", "test.txt")
     Xsignal = getXsignal("paper_settings_CreatedMessagesReport.txt")
     theta = 0.01
     allMatlabEngines = []
+    
+    
     #for i in range(len(Vehicles)):
     for i in range(3):
         allMatlabEngines.append(matlab.engine.start_matlab())
@@ -106,9 +115,10 @@ if __name__ == "__main__":
     for i in range(3):
         content = Vehicles[i].getContent()
         tag = Vehicles[i].getTag()
-        Phi = matlab.double(tag)
-        Y = matlab.double(content)
-        b = allMatlabEngines[i].getActualSignal(Phi, Y)
+        #Phi = matlab.double(tag)
+        #Y = matlab.double(content)
+        #b = allMatlabEngines[i].getActualSignal(Phi, Y)
+        b = allMatlabEngines[i].getActualSignal(matlab.double(tag), matlab.double(content))
         curr = np.array([val for subl in b for val in subl])
         actual = np.array(Xsignal)
         print("vehicle: {} - norm Difference= {}, Error ratio= {}"
