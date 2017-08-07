@@ -9,7 +9,7 @@ function [result] = getActualSignal(A, y)
   %x0 = [1 0 1 0]';    % original signal
   %x0 = m';
   Y  = y';          % measurements with no noise
-  lambda = 0.01;      % regularization parameter
+  lambda = 10;      % regularization parameter
   rel_tol = 0.01;     % relative target duality gap
   [x,status]=l1_ls(Phi,Y,lambda,rel_tol, true);
   %fprintf('The recovered value of X0 is :\n')

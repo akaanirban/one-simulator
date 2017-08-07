@@ -38,8 +38,8 @@ def extractContentTag(filename, resultFilename):
                         newCar.appendTag([int(i) for i in tag])
             else:
                 continue
-    file.close
-    etc.close
+    file.close()
+    etc.close()
     return cars
     
 #get the actual signal from the created messages report
@@ -58,6 +58,7 @@ def getXsignal(filename):
                 stringTotal = line.split(':')
                 xvalue = stringTotal[1].split('_')
                 Xsignal.append(float(xvalue[0]))
+    file.close()
     return Xsignal
     
 
@@ -92,6 +93,25 @@ def getRecoveryRatio(X, Xhat, theta):
                 lam = lam +1
     return lam/len(X)
 
+def writeFiles(Vehicles, Xsignal):
+    actualSignal = open("data/actualSignal.txt", "w")
+    actualSignal.write(",".join(str(i) for i in Xsignal))
+    actualSignal.close()
+    tag = open("data/tag.txt","w")
+    content = open("data/content.txt", "w")
+    for i in range(len(Vehicles)):
+        tags = Vehicles[i].getTag()
+        for m in range(len(tags)):
+            tag.write(",".join(str(i) for i in tags[m]))
+            tag.write("\n")
+        content.write(",".join(str(i) for i in Vehicles[i].getContent()))
+        if (i != len(Vehicles)-1):
+            content.write("\n")
+            content.write("#\n")
+            tag.write("#\n")
+    tag.close()
+    content.close()
+
 
 def getUniqueTags(contenttags):
     count = Counter(tuple(e) for e in contenttags)
@@ -103,28 +123,31 @@ def getUniqueTags(contenttags):
 if __name__ == "__main__":
     Vehicles = extractContentTag("paper_settings_MessagesPerHostReport.txt", "test.txt")
     Xsignal = getXsignal("paper_settings_CreatedMessagesReport.txt")
-    theta = 0.01
-    allMatlabEngines = []
+    writeFiles(Vehicles, Xsignal)
     
-    
-    #for i in range(len(Vehicles)):
-    for i in range(3):
-        allMatlabEngines.append(matlab.engine.start_matlab())
-        
-    #for i in range(len(Vehicles)):
-    for i in range(3):
-        content = Vehicles[i].getContent()
-        tag = Vehicles[i].getTag()
-        #Phi = matlab.double(tag)
-        #Y = matlab.double(content)
-        #b = allMatlabEngines[i].getActualSignal(Phi, Y)
-        b = allMatlabEngines[i].getActualSignal(matlab.double(tag), matlab.double(content))
-        curr = np.array([val for subl in b for val in subl])
-        actual = np.array(Xsignal)
-        print("vehicle: {} - norm Difference= {}, Error ratio= {}"
-              .format(i, np.linalg.norm(curr-actual), getErrorRatio(actual, curr)))
-        print("\nRecovery ratio = {}\n".format(getRecoveryRatio(actual, curr, theta)))
-    
+#==============================================================================
+#     theta = 0.01
+#     allMatlabEngines = []
+#     
+#     
+#     #for i in range(len(Vehicles)):
+#     for i in range(3):
+#         allMatlabEngines.append(matlab.engine.start_matlab())
+#         
+#     #for i in range(len(Vehicles)):
+#     for i in range(3):
+#         content = Vehicles[i].getContent()
+#         tag = Vehicles[i].getTag()
+#         #Phi = matlab.double(tag)
+#         #Y = matlab.double(content)
+#         #b = allMatlabEngines[i].getActualSignal(Phi, Y)
+#         b = allMatlabEngines[i].getActualSignal(matlab.double(tag), matlab.double(content))
+#         curr = np.array([val for subl in b for val in subl])
+#         actual = np.array(Xsignal)
+#         print("vehicle: {} - norm Difference= {}, Error ratio= {}"
+#               .format(i, np.linalg.norm(curr-actual), getErrorRatio(actual, curr)))
+#         print("\nRecovery ratio = {}\n".format(getRecoveryRatio(actual, curr, theta)))
+#==============================================================================
     
     
     
