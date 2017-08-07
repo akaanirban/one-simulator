@@ -13,7 +13,7 @@ from collections import Counter
 #etracts the contents and tags from the message perhost report
 def extractContentTag(filename, resultFilename):
     file = open(filename, "r")
-    etc = open(resultFilename, "w")
+    #etc = open(resultFilename, "w")
     vehicleFlag = False
     cars = []
     for line in file.readlines()[1:]:
@@ -39,7 +39,7 @@ def extractContentTag(filename, resultFilename):
             else:
                 continue
     file.close()
-    etc.close()
+    #etc.close()
     return cars
     
 #get the actual signal from the created messages report
@@ -93,12 +93,16 @@ def getRecoveryRatio(X, Xhat, theta):
                 lam = lam +1
     return lam/len(X)
 
-def writeFiles(Vehicles, Xsignal):
-    actualSignal = open("data/actualSignal.txt", "w")
+def writeFiles(Vehicles, Xsignal, sparsity, time, roundNum):
+    actualSigFileName = "data/actualSignal_K{}_{}_round{}.txt".format(sparsity, time, roundNum)
+    tagFileName = "data/tag_K{}_{}_round{}.txt".format(sparsity, time, roundNum)
+    contentFileName = "data/content_K{}_{}_round{}.txt".format(sparsity, time, roundNum)
+    
+    actualSignal = open(actualSigFileName, "w")
     actualSignal.write(",".join(str(i) for i in Xsignal))
     actualSignal.close()
-    tag = open("data/tag.txt","w")
-    content = open("data/content.txt", "w")
+    tag = open(tagFileName,"w")
+    content = open(contentFileName, "w")
     for i in range(len(Vehicles)):
         tags = Vehicles[i].getTag()
         for m in range(len(tags)):
@@ -121,9 +125,14 @@ def getUniqueTags(contenttags):
     return contenttag
     
 if __name__ == "__main__":
-    Vehicles = extractContentTag("paper_settings_MessagesPerHostReport.txt", "test.txt")
-    Xsignal = getXsignal("paper_settings_CreatedMessagesReport.txt")
-    writeFiles(Vehicles, Xsignal)
+    sparsity = 10
+    time = 60
+    roundNum = 1
+    vehicle_filename = "paper_settings_K{}_{}_round{}_MessagesPerHostReport.txt".format(sparsity, time, roundNum)
+    signal_filename =  "paper_settings_K{}_{}_round{}_CreatedMessagesReport.txt".format(sparsity, time, roundNum)
+    Vehicles = extractContentTag(vehicle_filename, "test.txt")
+    Xsignal = getXsignal(signal_filename)
+    writeFiles(Vehicles, Xsignal,sparsity, time, roundNum)
     
 #==============================================================================
 #     theta = 0.01

@@ -7,13 +7,15 @@ Created on Wed Aug  2 20:41:59 2017
 import random
 
 
-def writeScenario(filename):
+def writeScenario(filename, sparsity, time):
     file = open(filename, "a")
-    file.write("Scenario.name = paper_settings\n")
+    file.write("Scenario.name = paper_settings_K{}_{}_%%this.roundName\n".format(sparsity, time))
     file.write("Scenario.simulateConnections = true\n")
     file.write("Scenario.updateInterval = 0.1\n")
-    file.write("Scenario.endTime = 480\n")
+    file.write("Scenario.endTime = {}\n".format(time))
     file.write("Scenario.nrofHostGroups = 66\n")
+    file.write("this.roundName = [round1; round2; round3;round4; round5; round6;round7; round8; round9;round10; round11; round12;round13; round14; round15;round16; round17; round18;round19; round20]\n")
+    #file.write("this.roundName = [round1]\n")
     file.write("\n")
     file.close
     
@@ -101,11 +103,11 @@ def writeMovementModel(filename):
     file.write("\n")
     file.close
     
-def writeReports(filename):
+def writeReports(filename, time):
     file = open(filename, "a")
     file.write("Report.nrofReports = 2\n")
     file.write("Report.warmup = 0\n")
-    file.write("Report.reportDir = relatorios/\n")
+    file.write("Report.reportDir = /home/anirban/Softwares/GitHub/one-simulator/anirban/matlab_python/Matlab_python_integration/\n")
     #file.write("Report.report1 = MessageStatsReport\n")
     #file.write("Report.report2 = DeliveredMessagesReport\n")
     #file.write("Report.report3 = ContactsPerHourReport\n")
@@ -121,7 +123,7 @@ def writeReports(filename):
     #file.write("Report.report9 = MessageDelayReport\n")
     #file.write("Report.report10 = MessageReport\n")
     #file.write("Report.report11 = EventLogReport\n")
-    file.write("Report.granularity = 479\n")
+    file.write("Report.granularity = {}\n".format(time -1))
     #some random settings might not be needed
     file.write("ProphetRouter.secondsInTimeUnit = 30\n")
     file.write("SprayAndWaitRouter.nrofCopies = 6\n")
@@ -151,13 +153,15 @@ if __name__ == "__main__":
     totalFixedGroups = 64
     totalEventGenerators = 64
     totalMovingGroup = 1
-    filename = "anirban_generated_settings.txt"
+    sparsity = 20
+    time = 480
+    filename = "anirban_generated_settings_K{}_{}.txt".format(sparsity, time)
     
     f = open(filename, "w")
     f.close
     
     
-    writeScenario(filename)
+    writeScenario(filename, sparsity, time)
     writeInterface(filename)
     writeMovingGroup(filename, "Vehicle_", 1)
     
@@ -169,7 +173,7 @@ if __name__ == "__main__":
     writeOutSideGroup(filename, "HotSpot_TO", 66)
     writeCommonEvents(filename, totalEventGenerators)
     
-    active = random.sample(range(1, totalFixedGroups+1), 10)
+    active = random.sample(range(1, totalFixedGroups+1), sparsity)
     #notActive = list(set(totalnodes) - set(active))
     for i in range(1, 65):
         if i in active:
@@ -179,7 +183,7 @@ if __name__ == "__main__":
     
     writeMovementModel(filename)
     writeOptimization(filename)
-    writeReports(filename)
+    writeReports(filename, time)
     writeGUI(filename)
     
     

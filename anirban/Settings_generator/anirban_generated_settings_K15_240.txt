@@ -1,4 +1,4 @@
-Scenario.name = paper_settings_K10_240_%%this.roundName
+Scenario.name = paper_settings_K15_240_%%this.roundName
 Scenario.simulateConnections = true
 Scenario.updateInterval = 0.1
 Scenario.endTime = 240
@@ -673,7 +673,7 @@ Events8.size = 500k,1M
 Events8.hosts = 807, 807
 Events8.tohosts = 864, 864
 Events8.prefix = M
-Events8.activehotspot = true
+Events8.activehotspot = false
 
 Events9.class = MessageEventGenerator
 Events9.interval = 1,1
@@ -689,7 +689,7 @@ Events10.size = 500k,1M
 Events10.hosts = 809, 809
 Events10.tohosts = 864, 864
 Events10.prefix = M
-Events10.activehotspot = false
+Events10.activehotspot = true
 
 Events11.class = MessageEventGenerator
 Events11.interval = 1,1
@@ -737,7 +737,7 @@ Events16.size = 500k,1M
 Events16.hosts = 815, 815
 Events16.tohosts = 864, 864
 Events16.prefix = M
-Events16.activehotspot = false
+Events16.activehotspot = true
 
 Events17.class = MessageEventGenerator
 Events17.interval = 1,1
@@ -761,7 +761,7 @@ Events19.size = 500k,1M
 Events19.hosts = 818, 818
 Events19.tohosts = 864, 864
 Events19.prefix = M
-Events19.activehotspot = false
+Events19.activehotspot = true
 
 Events20.class = MessageEventGenerator
 Events20.interval = 1,1
@@ -769,7 +769,7 @@ Events20.size = 500k,1M
 Events20.hosts = 819, 819
 Events20.tohosts = 864, 864
 Events20.prefix = M
-Events20.activehotspot = false
+Events20.activehotspot = true
 
 Events21.class = MessageEventGenerator
 Events21.interval = 1,1
@@ -817,7 +817,7 @@ Events26.size = 500k,1M
 Events26.hosts = 825, 825
 Events26.tohosts = 864, 864
 Events26.prefix = M
-Events26.activehotspot = true
+Events26.activehotspot = false
 
 Events27.class = MessageEventGenerator
 Events27.interval = 1,1
@@ -825,7 +825,7 @@ Events27.size = 500k,1M
 Events27.hosts = 826, 826
 Events27.tohosts = 864, 864
 Events27.prefix = M
-Events27.activehotspot = false
+Events27.activehotspot = true
 
 Events28.class = MessageEventGenerator
 Events28.interval = 1,1
@@ -833,7 +833,7 @@ Events28.size = 500k,1M
 Events28.hosts = 827, 827
 Events28.tohosts = 864, 864
 Events28.prefix = M
-Events28.activehotspot = false
+Events28.activehotspot = true
 
 Events29.class = MessageEventGenerator
 Events29.interval = 1,1
@@ -857,7 +857,7 @@ Events31.size = 500k,1M
 Events31.hosts = 830, 830
 Events31.tohosts = 864, 864
 Events31.prefix = M
-Events31.activehotspot = true
+Events31.activehotspot = false
 
 Events32.class = MessageEventGenerator
 Events32.interval = 1,1
@@ -865,7 +865,7 @@ Events32.size = 500k,1M
 Events32.hosts = 831, 831
 Events32.tohosts = 864, 864
 Events32.prefix = M
-Events32.activehotspot = false
+Events32.activehotspot = true
 
 Events33.class = MessageEventGenerator
 Events33.interval = 1,1
@@ -873,7 +873,7 @@ Events33.size = 500k,1M
 Events33.hosts = 832, 832
 Events33.tohosts = 864, 864
 Events33.prefix = M
-Events33.activehotspot = false
+Events33.activehotspot = true
 
 Events34.class = MessageEventGenerator
 Events34.interval = 1,1
@@ -889,7 +889,7 @@ Events35.size = 500k,1M
 Events35.hosts = 834, 834
 Events35.tohosts = 864, 864
 Events35.prefix = M
-Events35.activehotspot = true
+Events35.activehotspot = false
 
 Events36.class = MessageEventGenerator
 Events36.interval = 1,1
@@ -929,7 +929,7 @@ Events40.size = 500k,1M
 Events40.hosts = 839, 839
 Events40.tohosts = 864, 864
 Events40.prefix = M
-Events40.activehotspot = false
+Events40.activehotspot = true
 
 Events41.class = MessageEventGenerator
 Events41.interval = 1,1
@@ -937,7 +937,7 @@ Events41.size = 500k,1M
 Events41.hosts = 840, 840
 Events41.tohosts = 864, 864
 Events41.prefix = M
-Events41.activehotspot = true
+Events41.activehotspot = false
 
 Events42.class = MessageEventGenerator
 Events42.interval = 1,1
@@ -953,7 +953,7 @@ Events43.size = 500k,1M
 Events43.hosts = 842, 842
 Events43.tohosts = 864, 864
 Events43.prefix = M
-Events43.activehotspot = false
+Events43.activehotspot = true
 
 Events44.class = MessageEventGenerator
 Events44.interval = 1,1
@@ -969,7 +969,7 @@ Events45.size = 500k,1M
 Events45.hosts = 844, 844
 Events45.tohosts = 864, 864
 Events45.prefix = M
-Events45.activehotspot = false
+Events45.activehotspot = true
 
 Events46.class = MessageEventGenerator
 Events46.interval = 1,1
@@ -985,7 +985,7 @@ Events47.size = 500k,1M
 Events47.hosts = 846, 846
 Events47.tohosts = 864, 864
 Events47.prefix = M
-Events47.activehotspot = false
+Events47.activehotspot = true
 
 Events48.class = MessageEventGenerator
 Events48.interval = 1,1
@@ -993,7 +993,7 @@ Events48.size = 500k,1M
 Events48.hosts = 847, 847
 Events48.tohosts = 864, 864
 Events48.prefix = M
-Events48.activehotspot = true
+Events48.activehotspot = false
 
 Events49.class = MessageEventGenerator
 Events49.interval = 1,1
@@ -1001,7 +1001,7 @@ Events49.size = 500k,1M
 Events49.hosts = 848, 848
 Events49.tohosts = 864, 864
 Events49.prefix = M
-Events49.activehotspot = true
+Events49.activehotspot = false
 
 Events50.class = MessageEventGenerator
 Events50.interval = 1,1
@@ -1049,7 +1049,7 @@ Events55.size = 500k,1M
 Events55.hosts = 854, 854
 Events55.tohosts = 864, 864
 Events55.prefix = M
-Events55.activehotspot = false
+Events55.activehotspot = true
 
 Events56.class = MessageEventGenerator
 Events56.interval = 1,1
@@ -1057,7 +1057,7 @@ Events56.size = 500k,1M
 Events56.hosts = 855, 855
 Events56.tohosts = 864, 864
 Events56.prefix = M
-Events56.activehotspot = true
+Events56.activehotspot = false
 
 Events57.class = MessageEventGenerator
 Events57.interval = 1,1
@@ -1097,7 +1097,7 @@ Events61.size = 500k,1M
 Events61.hosts = 860, 860
 Events61.tohosts = 864, 864
 Events61.prefix = M
-Events61.activehotspot = true
+Events61.activehotspot = false
 
 Events62.class = MessageEventGenerator
 Events62.interval = 1,1
@@ -1113,7 +1113,7 @@ Events63.size = 500k,1M
 Events63.hosts = 862, 862
 Events63.tohosts = 864, 864
 Events63.prefix = M
-Events63.activehotspot = false
+Events63.activehotspot = true
 
 Events64.class = MessageEventGenerator
 Events64.interval = 1,1
